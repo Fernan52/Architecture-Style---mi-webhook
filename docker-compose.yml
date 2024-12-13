@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  webhook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  # Mapea el puerto 5000 del contenedor al 5000 local
+    restart: always  # Reinicia el contenedor automáticamente si falla
